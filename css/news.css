@@ -1,0 +1,229 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #246083; 
+}
+::-webkit-scrollbar-thumb {
+  background: #eefdfe;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0D1B26;
+}
+body{
+  min-height: 100vh;
+  animation: gradient 1s ease infinite;
+  background: linear-gradient(15deg, #0D1B26, #246083);
+  background-size: cover;
+  justify-content: center;
+          align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Cairo', sans-serif;
+  margin: 20px;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  25% {
+      background-position: 50% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  75% {
+      background-position: 50% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+nav{
+  background-color: #eefdfe;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 100px;
+}
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: large;
+  border-radius: 1000px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover{
+  background-color: #0D1B26;
+  color: #eefdfe;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-button{
+  display: none;
+}
+.main {
+  padding: 20px;
+  background-color: #eefdfe; 
+  max-width: 2000px; /* Control the maximum width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  
+}
+.separator {
+border: none;
+  height: 20px;
+  background-color: #007bff; /* Color of the line */
+  margin: 20px 0;
+}
+.dropepage {
+margin: 40px;
+display: flex;
+background-color: blue;
+display: flex;
+flex-direction: column;
+
+}
+.texth {
+background-color: aquamarine;
+}
+.main h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: 246083;
+}
+.main p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.separator {
+border: none;
+height: 5px;
+background-color: #0f2841; /* Color of the line */
+margin: 20px 0; /* Space around the line */
+border-radius: 20px;
+}
+
+.news h1 {
+text-align: center;
+
+}.footer {
+  background-color: #eefdfe; /* Example background color */
+  padding: 20px 0; /* Example padding */
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Distribute space between the two sections */
+  align-items: center; /* Align items vertically centered */
+  max-width: 1200px; /* Maximum width of the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 20px; /* Example padding */
+  color: #000;
+}
+
+.footer-section {
+  flex: 1; /* Flexibly grow to take up available space */
+}
+
+.footer-section h3 {
+  text-align: center; /* Left align text */
+}
+
+.footer-section p {
+  text-align: center;
+  margin-right: 0px; /* Left align text */
+}
+.icons {
+text-align: center;
+}
+.social-icon {
+  margin-left: 15px; /* Spacing between icons */
+  color: #246083; /* Default icon color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 20px; /* Icon size */
+}
+
+.social-icon:hover {
+  color: #000; /* Change color on hover */
+}
+  @media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .main {
+      margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    }
+  }
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+    }
+  }
