@@ -183,7 +183,7 @@
 .separator1 {
   border: none;
   height: 2px;
-  background-color: #0D1B26; 
+  background-color: #0f2841; 
   margin: 20px 0;
   border-radius: 20px;
 }
@@ -434,13 +434,20 @@ text-align: center;
   }
     @media (max-width: 850px) {
       .newsarticles {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start of the container */
+        flex-direction: column; 
+        align-items: flex-start; 
+      }
+      .separator1 {
+        display: none; /* Hide the separator on smaller screens */
+      }
+      .separator {
+        display: none;
+      }
+      .newsarticles a{
+        margin-bottom: 30px;
       }
     }
-    .separator1 {
-      display: none; /* Hide the separator on smaller screens */
-    }
+    
   
   @media (max-width: 1000px) {
     .container1 {
