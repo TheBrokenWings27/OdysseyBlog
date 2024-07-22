@@ -432,6 +432,16 @@ text-align: center;
       width: 100%;
     }
   }
+    @media (max-width: 850px) {
+      .newsarticles {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start of the container */
+      }
+    }
+    .separator1 {
+      display: none; /* Hide the separator on smaller screens */
+    }
+  
   @media (max-width: 1000px) {
     .container1 {
       flex-direction: column; /* Stack cards vertically on smaller screens */
