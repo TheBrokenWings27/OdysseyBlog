@@ -175,15 +175,82 @@
 }
 
 
+
 /*    NEWS
 
 
 */
+.separator1 {
+  border: none;
+  height: 2px;
+  background-color: #0D1B26; 
+  margin: 20px 0;
+  border-radius: 20px;
+}
+.articlelink {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the color from the parent element */
+}
 
-
+.newsarticles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
 .news h1 {
   text-align: center;
 
+}
+.news h3 {
+  text-align: left;
+}
+.news h5 {
+  text-align: left;
+}
+.news p{
+  color: #9b9b9b;
+  margin-top: 5px;
+}
+.news1 {
+ text-align: center;
+ margin-left: 30px;
+}
+
+.news2 {
+  text-align: center;
+ }
+ .news3 {
+  text-align: center;
+ }
+ .newsarticles > div {
+  flex: 1;
+  padding: 10px; 
+  border-right: 2px solid #0D1B26; 
+}
+
+.newsarticles > div:last-child {
+  border-right: none; /* Remove the right border from the last item */
+}
+
+.scond-article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add some space between each article */
+}
+.scond-article a {
+  display: block;
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent element */
+}
+.scond-article .content {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add some space between image and text */
+}
+
+.scond-article .text {
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -309,11 +376,11 @@ input:checked + label .description {
 
 .container {
   display: flex;
-  justify-content: space-between; /* Distribute space between the two sections */
-  align-items: center; /* Align items vertically centered */
-  max-width: 1200px; /* Maximum width of the container */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 0 20px; /* Example padding */
+  justify-content: space-between; 
+  align-items: center; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
   color: #000;
 }
 
