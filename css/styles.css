@@ -54,6 +54,7 @@
     background-color: #eefdfe;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+
   }
   nav ul{
     width: 100%;
@@ -124,8 +125,8 @@
     
     align-items: center;
     margin-top: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 20px;
 }
 
@@ -168,8 +169,8 @@
 
 .separator {
   border: none;
-  height: 5px;
-  background-color: #0f2841; 
+  height: 3px;
+  background-color: #246083; 
   margin: 20px 0; 
   border-radius: 20px;
 }
@@ -183,18 +184,17 @@
 .separator1 {
   border: none;
   height: 2px;
-  background-color: #0f2841; 
+  background-color: #246083; 
   margin: 20px 0;
   border-radius: 20px;
 }
 .articlelink {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .newsarticles {
   display: flex;
-  justify-content: space-between;
   align-items: center; 
 }
 .news h1 {
@@ -209,48 +209,88 @@
 }
 .news p{
   color: #9b9b9b;
-  margin-top: 5px;
+  margin-top: 0px;
+  text-align: center;
 }
 .news1 {
- text-align: center;
- margin-left: 30px;
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 800px;
+  
 }
-
+.news1 img{
+  max-width: 100%; /* Make sure the image scales with the container */
+  height: auto;
+  border-radius: 8px;
+}
+.news1 p{
+  margin-right: 20px;
+}
 .news2 {
   text-align: center;
  }
+ .news2 img{
+  max-width: 50%; /* Make sure the image scales with the container */
+  height: auto;
+  border-radius: 8px;
+}
  .news3 {
   text-align: center;
  }
+ .news3 img{
+  max-width: 50%; /* Make sure the image scales with the container */
+  height: auto;
+  border-radius: 8px;
+}
+.mininews h6{
+  margin-bottom: 20px;
+}
+.mininews h3{
+  margin-top: 20px;
+}
  .newsarticles > div {
   flex: 1;
   padding: 10px; 
-  border-right: 2px solid #0D1B26; 
+  border-right: 2px solid #246083; 
 }
 
 .newsarticles > div:last-child {
-  border-right: none; /* Remove the right border from the last item */
+  border-right: none;
 }
 
-.scond-article {
+.news2 {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Add some space between each article */
+  gap: 20px;
 }
-.scond-article a {
+.news2 a {
   display: block;
   text-decoration: none; /* Remove underline from links */
   color: inherit; /* Inherit color from parent element */
 }
-.scond-article .content {
-  display: flex;
+.button {
   align-items: center;
-  gap: 10px; /* Add some space between image and text */
+}
+.buttonsign {
+  background: linear-gradient(15deg, #0D1B26, #246083);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 120px;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #eefdfe;
+  font-size: large;
+  
 }
 
-.scond-article .text {
-  display: flex;
-  flex-direction: column;
+.buttonsign:hover{
+  color: #08d2cd;
 }
 
 
@@ -262,9 +302,15 @@
 .activities h1{
 text-align: center;
 }
+.activities p {
+  color: grey;
+  text-align: center;
+  margin-bottom: 0px;
+}
 .wrapper {
   width: 100%;
-  height: 100vh;
+  margin-top: 40px;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -321,18 +367,25 @@ text-align: center;
   transition-delay: .3s;
   transition: all .3s ease;
 }
-
+.description {
+  display: flex;
+  flex-direction: row;
+}
 .description p {
-  color: #246083;
-  padding-bottom: 40px;
+  color: #000;
+  font-size: medium;
+  padding-top: 40px;
+
 }
 
-.description h3 {
+.description h2 {
   padding-top: 5px;
-  color: #0D1B26;
+  color: #eefdfe;
   text-transform: uppercase;
   position: absolute;
+  margin-bottom: 20px;
 }
+
 
 input {
   display: none;
@@ -348,16 +401,16 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-  background-image: url('photos/pole.jpg');
-}
+  background-image: url('../photos/A\ Corporate\ Milestone\ Anniversary\ at\ Amber\ Lakes\ -\ MGN\ Events\ \(1\).jpeg');}
+
 .card[for="c2"] {
-  background-image: url('photos/118210475_4310342845703881_3567624425236315629_n.jpg');
+  background-image: url('../photos/The\ Story\ In\ Your\ Head\ Is\ What\ Stops\ You\ From\ Succeeding_\ Here\ Is\ How\ to\ Change\ It.jpeg');
 }
 .card[for="c3"] {
-  background-image: url('photos/banner-image-1.JPG');
+  background-image: url('../photos/A\ Little\ Life\ by\ Hanya\ Yanagihara_\ Book\ Review.jpeg');
 }
 .card[for="c4"] {
-  background-image: url('photos/school.jpeg');
+  background-image: url('../photos/Premium\ Photo\ _\ Microscope\ pharmaceutical\ and\ female\ scientist\ with\ face\ mask\ for\ virus\ analysis\ in\ a\ lab\ Professional\ science\ and\ African\ woman\ researcher\ working\ on\ medical\ research\ with\ biotechnology\ equipment.jpeg');
 }
 
 
@@ -437,14 +490,20 @@ text-align: center;
         flex-direction: column; 
         align-items: flex-start; 
       }
-      .separator1 {
-        display: none; /* Hide the separator on smaller screens */
-      }
-      .separator {
-        display: none;
-      }
+     
       .newsarticles a{
         margin-bottom: 30px;
+      }
+      .main {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      .news1 {
+       flex-direction: row;
+      }
+      .news1 img {
+        max-width: 90%;
+    
       }
     }
     
