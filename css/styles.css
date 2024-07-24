@@ -513,18 +513,15 @@ text-align: center;
 .social-icon:hover {
   color: #000; /* Change color on hover */
 }
-@media(max-width: 0px){
+@media(max-width: 700px){
   .student {
     flex-direction: column; /* Stack items vertically on smaller screens */
     align-items: center; /* Center align items vertically */
   }
-
-    .scientific {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin-bottom: 40px;
-      }
+  .scientific {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center align items vertically */
+  }
 }
   @media(max-width: 900px){
     .hideOnMobile{
