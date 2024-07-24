@@ -411,78 +411,60 @@ input:checked + label .description {
 }
 /*        articles */
 
-
 .recommended h1{
   text-align: center;
 }
-.post-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  margin-top: 20px;
-
+.recommended h2 {
+  text-align: left;
+  margin-left: 20px;
 }
+.student {
+display: flex;
+justify-content: center;
+margin-bottom: 40px;
+}
+.scientific {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  }
 .post {
+  max-width: 350px;
   border-radius: 20px;
-  width: 300px;
-  height: 350px;
   display: inline-block;
-  background: linear-gradient(150deg, #eefdfe, #246083);;
   display: flex;
   flex-direction: column;
-  
   align-items: center; 
   text-align: center;
   margin: 0 20px;
   display: flex;
 }
 .post img {
-  max-width: 90%; 
-  margin-top: 17.5px;
-  height: auto;
-  border-radius: 20px;
-}
-.post2 {
-  border-radius: 20px;
-  width: 300px;
-  height: 350px;
-  display: inline-block;
-  background: linear-gradient(120deg, #eefdfe, #246083);;
-  display: flex;
-  flex-direction: column;
   
-  align-items: center; 
-  text-align: center;
-  margin: 0 20px;
-  display: flex;
-}
-.post2 img {
-  max-width: 90%; 
   margin-top: 17.5px;
-  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
   border-radius: 20px;
 }
-.post3 {
-  border-radius: 20px;
-  width: 300px;
-  height: 350px;
+.readbutton a{
+  background: linear-gradient(15deg, #08d2cd, #0f2841);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   display: inline-block;
-  background: linear-gradient(160deg, #eefdfe, #246083);;
-  display: flex;
-  flex-direction: column;
-  
-  align-items: center; 
-  text-align: center;
-  margin: 0 20px;
-  display: flex;
-}
-.post3 img {
-  max-width: 90%; 
-  margin-top: 17.5px;
-  height: auto;
   border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #eefdfe;
+  font-size: large;
 }
+
+.readbutton a:hover {
+  align-items: center;
+  color: #87FFD4;
+}
+
 /* 
      FOOTER
 */
@@ -530,6 +512,19 @@ text-align: center;
 
 .social-icon:hover {
   color: #000; /* Change color on hover */
+}
+@media(max-width: 0px){
+  .student {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center align items vertically */
+  }
+
+    .scientific {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 40px;
+      }
 }
   @media(max-width: 900px){
     .hideOnMobile{
