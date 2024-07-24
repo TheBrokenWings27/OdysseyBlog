@@ -10,14 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../photos/Symbol.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 
 
 
 <body>
-    <script src="script/script.js"></script>
+    <script src="../script/script.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--
 
         header
@@ -25,7 +27,7 @@
     <header id="navbar" >
         <nav class="sticky">
             <ul class="sidebar">
-              <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+              <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
               <li><a href="index.html" class="nav-link-1" >Home</a></li>
               <li><a href="life.html" class="nav-link-1" >Students Life</a></li>
               <li><a href="club.html" class="nav-link-1" >Club Activities</a></li>
@@ -42,7 +44,7 @@
               <li class="hideOnMobile"><a href="club.html">Club Activities</a></li>
               <li class="hideOnMobile"><a href="articles.html">Science Articles</a></li>
               <li class="hideOnMobile"><a href="news.html">Nanotechnology News</a></li>
-              <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+              <li class="menu-button" onclick=showSidebar()><a ><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
             </ul>
         </nav>
         
@@ -74,7 +76,7 @@
 
      <div class="news1">
         <div class="news1left">
-                   <a href="Gold nanoparticles kill cancer.html" class="articlelink">
+                   <a href="../News/Gold.html" class="articlelink">
                     <img src="../photos/colon cancer cells.gif" alt="colon" >
                     <p>By me, 27/01/2006</p>
                 </div><div class="news1right">
@@ -99,7 +101,7 @@
                   <hr class="news22">
                   <div class="scond">
                      <div class="scond-article">
-                         <a href="Gold nanoparticles kill cancer.html" alt="col" class="articlelink">
+                         <a href="../News/Gold.html" alt="col" class="articlelink">
                                  <img src="../photos/photo_2024-07-17 23.23.31.jpeg" alt="trans" >
                                  <p>27/01/2006</p>
                                      <h3>OPTICAL & ELECTRONIC PROPERTIES OF GOLD NANOPARTICLES</h3>
@@ -112,23 +114,23 @@
 
    <div class="news3">
     <div class="mininews">
-                         <a href="Gold nanoparticles kill cancer.html" alt="col" class="articlelink">
-                                     <h3>A planet needs to start with a lot of water to become like Earth</h3>
+                         <a href="../News/Gold.html" alt="col" class="articlelink">
+                                     <h3>A planet needs to start with a lot of water to become like Earth: This just a test</h3>
                                      <h5>In a seafloor surprise, metal-rich chunks may generate deep-sea oxygen</h5>
                                      <h6>By Emily ConoverJuly 19, 2024</h6> </a>
                                      <hr class="news22">
     </div><div class="mininews">           
-                      <a href="Gold nanoparticles kill cancer.html" alt="col" class="articlelink">
+                      <a href="../News/Gold.html" alt="col" class="articlelink">
                                         <h3>Can light spark superconductivity? A new study reignites debate</h3>
                                         <h6>By Emily ConoverJuly 19, 2024</h6> </a>
                                         <hr class="news22">
  </div><div class="mininews">                                   
-                      <a href="Gold nanoparticles kill cancer.html" alt="col" class="articlelink">
+                      <a href="../News/Gold.html" alt="col" class="articlelink">
                                             <h3>How to stay healthy during the COVID-19 summertime surge</h3>
                                             <h6>By Emily ConoverJuly 19, 2024</h6> </a>
                                             <hr class="news22">
         </div><div class="mininews">
-                      <a href="Gold nanoparticles kill cancer.html" alt="col" class="articlelink">
+                      <a href="../News/Gold.html" alt="col" class="articlelink">
                                             <h3>Twisters asks if you can 'tame' a tornado. We have the answer</h3>
                                             <h6>By Emily ConoverJuly 19, 2024</h6> </a>
         </div>
@@ -136,10 +138,13 @@
                  </div>
               </div>
         </div> 
+        
 <div class="button">
         <a href="https://newsletter-odyssey.vercel.app/" class="buttonsign">
             Signup for our Newsletter</a>
         </div>
+
+
        <div class="activities">
         <hr class="separator">
         <h1>Our Activities</h1>
@@ -190,9 +195,30 @@
         </div>
        </div>
        <div class="recommended">
-        <hr class="separator">
-        <h1>Recommended Articles</h1>
+          <hr class="separator">
+          <h1>Recommended Articles</h1>
+           <div class="post-wrapper">
+             <div class="post">
+                <img src="../photos/118210475_4310342845703881_3567624425236315629_n.jpg" alt="article photo">
+                 <h3>My first year in NSNN: Advices and Lessons</h3>
+                 <h5>Written by CHELIHI Motaki Errahmane</h5>
+                 <h5>Top grade student</h5>
+                <h5>24 Jul 2024</h5>
+             </div>
+             <div class="post2">
+                <img src="../photos/118210475_4310342845703881_3567624425236315629_n.jpg" alt="solvay">
+                <h3>My first year in NSNN: Advices and Lessons</h3>
+                 <h5>Written by HACHECHE Melissa</h5>
+                 <h5>GENESIS Class Student </h5>
+                <h5>24 Jul 2024</h5>
+             </div>
+             <div class="post3">
+                <img src="../photos/118210475_4310342845703881_3567624425236315629_n.jpg" alt="">
+             </div>
+             
+           </div>
        </div>
+       
     </main>
     <footer class="footer">
         <div class="container">

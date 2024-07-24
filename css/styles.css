@@ -221,7 +221,7 @@
   
 }
 .news1 img{
-  max-width: 100%; /* Make sure the image scales with the container */
+  max-width: 100%; 
   height: auto;
   border-radius: 8px;
 }
@@ -232,18 +232,14 @@
   text-align: center;
  }
  .news2 img{
-  max-width: 50%; /* Make sure the image scales with the container */
+  max-width: 50%; 
   height: auto;
   border-radius: 8px;
 }
  .news3 {
   text-align: center;
  }
- .news3 img{
-  max-width: 50%; /* Make sure the image scales with the container */
-  height: auto;
-  border-radius: 8px;
-}
+
 .mininews h6{
   margin-bottom: 20px;
 }
@@ -271,7 +267,7 @@
   color: inherit; /* Inherit color from parent element */
 }
 .button {
-  align-items: center;
+  text-align: center;
 }
 .buttonsign {
   background: linear-gradient(15deg, #0D1B26, #246083);
@@ -279,17 +275,16 @@
   padding: 10px 20px;
   margin-top: 20px;
   margin-bottom: 30px;
-  margin-left: 120px;
   display: inline-block;
   border-radius: 20px;
   cursor: pointer;
   text-decoration: none;
   color: #eefdfe;
   font-size: large;
-  
 }
 
 .buttonsign:hover{
+  align-items: center;
   color: #08d2cd;
 }
 
@@ -372,7 +367,7 @@ text-align: center;
   flex-direction: row;
 }
 .description p {
-  color: #000;
+  color: #eefdfe;
   font-size: medium;
   padding-top: 40px;
 
@@ -401,19 +396,93 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-  background-image: url('../photos/A\ Corporate\ Milestone\ Anniversary\ at\ Amber\ Lakes\ -\ MGN\ Events\ \(1\).jpeg');}
+  background: linear-gradient(15deg, #0D1B26, #246083);
+
+}
 
 .card[for="c2"] {
-  background-image: url('../photos/The\ Story\ In\ Your\ Head\ Is\ What\ Stops\ You\ From\ Succeeding_\ Here\ Is\ How\ to\ Change\ It.jpeg');
+  background: linear-gradient(15deg, #0D1B26, #246083);
 }
 .card[for="c3"] {
-  background-image: url('../photos/A\ Little\ Life\ by\ Hanya\ Yanagihara_\ Book\ Review.jpeg');
+  background: linear-gradient(15deg, #0D1B26, #246083);
 }
 .card[for="c4"] {
-  background-image: url('../photos/Premium\ Photo\ _\ Microscope\ pharmaceutical\ and\ female\ scientist\ with\ face\ mask\ for\ virus\ analysis\ in\ a\ lab\ Professional\ science\ and\ African\ woman\ researcher\ working\ on\ medical\ research\ with\ biotechnology\ equipment.jpeg');
+  background: linear-gradient(15deg, #0D1B26, #246083);
 }
+/*        articles */
 
 
+.recommended h1{
+  text-align: center;
+}
+.post-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+
+}
+.post {
+  border-radius: 20px;
+  width: 300px;
+  height: 350px;
+  display: inline-block;
+  background: linear-gradient(150deg, #eefdfe, #246083);;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center; 
+  text-align: center;
+  margin: 0 20px;
+  display: flex;
+}
+.post img {
+  max-width: 90%; 
+  margin-top: 17.5px;
+  height: auto;
+  border-radius: 20px;
+}
+.post2 {
+  border-radius: 20px;
+  width: 300px;
+  height: 350px;
+  display: inline-block;
+  background: linear-gradient(120deg, #eefdfe, #246083);;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center; 
+  text-align: center;
+  margin: 0 20px;
+  display: flex;
+}
+.post2 img {
+  max-width: 90%; 
+  margin-top: 17.5px;
+  height: auto;
+  border-radius: 20px;
+}
+.post3 {
+  border-radius: 20px;
+  width: 300px;
+  height: 350px;
+  display: inline-block;
+  background: linear-gradient(160deg, #eefdfe, #246083);;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center; 
+  text-align: center;
+  margin: 0 20px;
+  display: flex;
+}
+.post3 img {
+  max-width: 90%; 
+  margin-top: 17.5px;
+  height: auto;
+  border-radius: 20px;
+}
 /* 
      FOOTER
 */
@@ -478,6 +547,10 @@ text-align: center;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
+   }
+   .description p{
+    padding-top: 60px;
+    
    }
   }
   @media(max-width: 400px){

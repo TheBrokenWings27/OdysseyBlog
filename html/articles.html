@@ -17,7 +17,18 @@
 
 
 <body>
-    <script src="script/script.js"></script>
+    <script >
+        function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
+ 
+
+    </script>
     <!--
 
         header
@@ -25,7 +36,7 @@
     <header class="header">
         <nav>
             <ul class="sidebar">
-              <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+              <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
               <li><a href="index.html" class="nav-link-1" >Home</a></li>
               <li><a href="life.html" class="nav-link-1" >Students Life</a></li>
               <li><a href="club.html" class="nav-link-1" >Club Activities</a></li>
@@ -34,7 +45,7 @@
             </ul>
             <ul>
               <li><a href="index.html">
-                <img src="css/photos/Odyssey.png" alt="logo" width="80px" class="logo">
+                <img src="../photos/Odyssey.png" alt="logo" width="80px" class="logo">
                 Odyssey Blog
             </a></li>
               <li class="hideOnMobile"><a href="index.html">Home</a></li>
@@ -42,7 +53,7 @@
               <li class="hideOnMobile"><a href="club.html">Club Activities</a></li>
               <li class="hideOnMobile"><a href="articles.html">Science Articles</a></li>
               <li class="hideOnMobile"><a href="news.html">Nanotechnology News</a></li>
-              <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+              <li class="menu-button" onclick=showSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
             </ul>
           </nav>
         
