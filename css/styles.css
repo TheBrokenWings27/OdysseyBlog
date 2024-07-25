@@ -154,11 +154,18 @@
   margin: 0;/* Left align text */
  
 }
-
+.Img-drop {
+  text-align: center;
+}
 .Img-drop img{
-  max-width: 100%; /* Make sure the image scales with the container */
+  max-width: 80%; 
   height: auto;
   border-radius: 8px;
+}
+@media(max-width: 950px){ 
+  .Img-drop img{
+    max-width: 100%;
+  }
 }
 .Img-drop p {
   font-size: small;

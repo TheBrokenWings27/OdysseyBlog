@@ -7,6 +7,7 @@
     <meta name="title" content="NSNN Blog Website">
     <meta description="A plog Website For the National Higher School Of Nanosciences and Nanotechnology Students">
     <style>
+       
         *{
     margin: 0;
     padding: 0;
@@ -240,6 +241,13 @@ text-align: center;
       width: 100%;
     }
   }
+  @media(max-width: 900px){
+  .main {
+      margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+   }}
   @media (max-width: 1000px) {
     .container1 {
       flex-direction: column; /* Stack cards vertically on smaller screens */
@@ -284,7 +292,7 @@ text-align: center;
 
 
 <body>
-    <script src="script/script.js">
+    <script>
       function showSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'flex'
@@ -303,18 +311,18 @@ text-align: center;
         <nav class="sticky">
             <ul class="sidebar">
               <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-              <li><a href="html/index.html" class="nav-link-1" >Home</a></li>
+              <li><a href="../index.html" class="nav-link-1" >Home</a></li>
               <li><a href="../html/life.html" class="nav-link-1" >Students Life</a></li>
               <li><a href="../html/club.html" class="nav-link-1" >Club Activities</a></li>
               <li><a href="../html/articles.html" class="nav-link-1" r>Scientific Articles</a></li>
               <li><a href="../html/news.html" class="nav-link-1">Nanotechnology News</a></li>
             </ul>
             <ul>
-              <li><a href="html/index.html">
+              <li><a href="../index.html">
                 <img src="../photos/Odyssey.png" alt="logo" width="100px" class="logo">
                 <h2>Odyssey Blog</h2>
             </a></li>
-              <li class="hideOnMobile"><a href="html/index.html">Home</a></li>
+              <li class="hideOnMobile"><a href="../index.html">Home</a></li>
               <li class="hideOnMobile"><a href="../html/life.html">Students Life</a></li>
               <li class="hideOnMobile"><a href="../html/club.html">Club Activities</a></li>
               <li class="hideOnMobile"><a href="../html/articles.html">Science Articles</a></li>
