@@ -449,10 +449,12 @@ margin-bottom: 40px;
 .post img {
   
   margin-top: 17.5px;
+  margin-bottom: 20px;
   max-width: 100%;
   border-radius: 10px;
   border-radius: 20px;
 }
+
 .readbutton a{
   background: linear-gradient(15deg, #08d2cd, #0f2841);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
@@ -530,7 +532,7 @@ text-align: center;
     align-items: center; /* Center align items vertically */
   }
 }
-  @media(max-width: 900px){
+  @media(max-width: 950px){
     .hideOnMobile{
       display: none;
     }
@@ -551,6 +553,9 @@ text-align: center;
     padding-top: 60px;
     
    }
+   .newsarticles > div {
+    border-right: none; 
+  }
   }
   @media(max-width: 400px){
     .sidebar{
