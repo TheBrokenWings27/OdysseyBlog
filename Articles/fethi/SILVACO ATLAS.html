@@ -379,9 +379,40 @@ text-align: center;
         <h3> Big meshing values fast simulation, but less accurate results</h3><h3>
              Small meshing values  slow simulation, but more accurate results</h3><h3>
              Mesh auto </h3><h3> Y meshing values will be set at regions statement.</h3>
+            <div class="image"> <img src="fethi2-ph16.png" alt="fib" ></div>
+            <div class="image"> <img src="fethi2-ph2.png" alt="fib" ></div>
+            <div class="image"> <img src="fethi2-ph3.png" alt="fib" ></div>
+            <div class="image"> <img src="fethi2-ph4.png" alt="fib" ></div>
       <hr class="space">
-
+      <h1>Les différents méthode numériques</h1>
+      <hr class="titleline">
         
+      <div class="paragh">
+        <div class="text">
+        <h3> Newton and Gummel : The most used in simulation.</h3><h3>
+             If we have a problem or error of convergence, you can use :
+            Maxtrap , Climits and Itlimits.</h3>
+       </div><div class="image">
+        <img src="fethi2-ph5.png" alt="fib" ></div></div>
+    
+       <hr class="space">
+      <h1>Current-Voltage characterstic I-V</h1>
+      <hr class="titleline">
+        
+      <div class="paragh">
+        <div class="text">
+        <h3>Solve init: call all the parameters of structure, doping, materials parameters………… which
+            described previously.</h3><h3>
+            Solve b1=1 : Set the intensity of the beam number one ( solar Spectrum : AM0 or AM1.5)
+            at 1 W/cm^2.</h3><h2>beam num=1 AM1.5 x.origin=0.05 y.origin=-2.0 angle=90.0</h2>
+            <h3>Solve name=anode…….. : Varie the anode voltage from 0 to 0.8 V by 0.01 (pas).</h3><h3>
+Extract init infile=name.ext : Extract from this file the parameters specified, for example if
+We have a file .log which contains current versus voltage, so we can Extract the characterstic
+parameters of a solar cell like : Jsc , Voc, FF and efficiency ɳ.</h3>
+       </div>
+    <div class="image">
+      <img src="fethi2-ph6.png" alt="fib" ></div>
+    </div>
     </main>
     <footer class="footer">
         <div class="container">
