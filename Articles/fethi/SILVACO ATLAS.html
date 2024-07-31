@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyssey Blog</title>
+    <meta name="title" content="NSNN Blog Website">
+    <meta description="A plog Website For the National Higher School Of Nanosciences and Nanotechnology Students">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #246083; 
+}
+::-webkit-scrollbar-thumb {
+    background: #eefdfe;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0D1B26;
+}
+  body{
+    min-height: 100vh;
+    animation: gradient 1s ease infinite;
+    background: linear-gradient(15deg, #0D1B26, #246083);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Cairo', sans-serif;
+    margin: 20px;
+  }
+
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+  nav{
+    background-color: #eefdfe;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav li{
+    height: 100px;
+  }
+  nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: large;
+    border-radius: 1000px;
+    transition: background-color 0.3s ease;
+  }
+ 
+  nav a:hover{
+    background-color: #0D1B26;
+    color: #eefdfe;
+  }
+  nav li:first-child{
+    margin-right: auto;
+  }
+  
+  .sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+  }
+
+
+
+  /*         Main
+  */
+  .text {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: large;
+    margin-bottom: 30px;
+}
+  .main {
+    padding: 20px;
+    background-color: #eefdfe; 
+    max-width: 2000px; /* Control the maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 8px;
+    
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.title {
+   align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.title h1{
+    
+    margin-bottom: 10px;
+}
+.title h5 {
+    margin-left: 40px;
+    margin: 2px 0;
+}
+
+.main img{
+  width: 90%;
+}
+.image {
+  text-align: center;
+}
+.image img{
+  display: inline-block;
+  max-height: 70vh;
+
+}
+
+.titleline {
+  border: none;
+  height: 3px;
+  margin-bottom: 30px;
+  background-color: #fddc5c; 
+  border-radius: 20px;
+}
+.space {
+  border: none;
+  height: 3px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+.paragh {
+  display: flex;
+}
+@media(max-width: 800px){
+  .paragh {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.note {
+  align-items: center;
+  color: #246083;
+  margin-left: 100px;
+}
+/* 
+     FOOTER
+*/
+
+
+.footer {
+  background-color: #eefdfe; /* Example background color */
+  padding: 20px 0; /* Example padding */
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+  color: #000;
+}
+
+.footer-section {
+  flex: 1; /* Flexibly grow to take up available space */
+}
+
+.footer-section h3 {
+  text-align: center;/* Left align text */
+}
+
+.footer-section p {
+  text-align: center;
+  margin-right: 0px; /* Left align text */
+}
+.icons {
+text-align: center;
+}
+.social-icon {
+  margin-left: 15px; /* Spacing between icons */
+  color: #246083; /* Default icon color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 20px; /* Icon size */
+}
+
+.social-icon:hover {
+  color: #000; /* Change color on hover */
+}
+  @media(max-width: 900px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .main {
+      margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+   }
+   
+  }
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+    }
+  }
+  @media(max-width: 900px){
+  .main {
+      margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+   }}
+   
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../photos/Symbol.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+
+
+
+<body>
+    <script>
+      function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
+  
+    </script>
+    <!--
+
+        header
+    -->
+    <header id="navbar" >
+        <nav class="sticky">
+            <ul class="sidebar">
+              <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+              <li><a href="../../index.html" class="nav-link-1" >Home</a></li>
+              <li><a href="../../html/life.html" class="nav-link-1" >Students Life</a></li>
+              <li><a href="../../html/club.html" class="nav-link-1" >Club Activities</a></li>
+              <li><a href="../../html/articles.html" class="nav-link-1" r>Scientific Articles</a></li>
+              <li><a href="../../html/news.html" class="nav-link-1">Nanotechnology News</a></li>
+            </ul>
+            <ul>
+              <li><a href="../../index.html">
+                <img src="../../photos/Odyssey.png" alt="logo" width="100px" class="logo">
+                <h2>Odyssey Blog</h2>
+            </a></li>
+              <li class="hideOnMobile"><a href="../../index.html">Home</a></li>
+              <li class="hideOnMobile"><a href="../../html/life.html">Students Life</a></li>
+              <li class="hideOnMobile"><a href="../../html/club.html">Club Activities</a></li>
+              <li class="hideOnMobile"><a href="../../html/articles.html">Science Articles</a></li>
+              <li class="hideOnMobile"><a href="../../html/news.html">Nanotechnology News</a></li>
+              <li class="menu-button" onclick=showSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+
+  
+
+    <main class="main">
+             
+     <div class="title">
+      <h1>SILVACO ATLAS</h1>
+      <h2>31 jul 2024</h2>
+        <h2>Written by Benyettou Fethi</h2>
+        <h2>Ph.D physics, Solar panels based on nanomaterials</h2> </div>
+    
+       <div class="paragh">
+        <div class="text">
+        <h3> C’est un outil virtuel de fabrication et de modélisations des composants à base
+            semi-conducteurs.</h3>
+       </div>
+    
+    <div class="image">
+      <img src="fethi2-ph1.png" alt="fib" ></div>
+    </div>
+
+
+    <h1>2.Les processus crées par FIB</h1>
+    <hr class="titleline">
+
+    <div class="paragh">
+      <div class="text">
+     <h3> o La pulvérisation d’atomes neutres et ionisés
+      qui provoque la gravure (Sputtering process).</h3><h3>
+      o L’émission d’électrons qui permettent
+      d’imager la surface (SEM) ; ils peuvent être
+      responsables du chargement de l’échantillon
+      lorsque celui-ci est isolant.</h3><h3>
+      o Le déplacement des atomes dans l’échantillon
+      qui cause des défauts étendus et qui induit la
+      formation d’une couche amorphe pour un
+      solide cristallin (lorsque l’énergie de faisceau
+      (Beam energy est faible).</h3><h3>
+      o L’émission de phonons qui sont responsables
+      de l’échauffement de l’échantillon ;</h3><h3>
+      o L’implantation des ions incidents.</h3></div>
+
+      <div class="image">
+        <img src="fethi1-ph2.png" alt="fib" ></div></div>
+        
+      <hr class="space">
+
+        <div class="paragh"><div class="image">
+          <img src="fethi1-ph3.png" alt="fib" ></div>
+          <div class="text">
+         <h3> (1) Source d’ions : Constitue un reservoir de métal ( Ga, AuSi, AuGe..) maintenu à
+          l’extrémité d’une Pointe généralement de Tungsten. On chaufe le métal jusqu’à il devient
+          liquide en suivant les étapes : (a), (b).</h3><h3>
+          • (a) : appuyer sur HV pour augmenter energy beam à 30 KeV.</h3><h3>
+          • (b) : Heat on, on chaufe la source; on commence par 1.5 µm et on augmente par 0.1 µm
+          tout les 20 seconde jusuqu’à avoir un courant de chaufage de 2.8 A.</h3><h3>
+           (2) et (3) sont les tensions de suppreseur et extracteur à appliquer sur la source pour émettre
+          le faisceau des ions. On régle ces 2 tensions jusqu’à obtenir un courant d’émission de 4 µm.</h3>
+          </div>
+    
+          </div>
+
+          <hr class="space">
+          <div class="image">
+            <img src="fethi1-ph4.png" alt="fib" ></div>
+          </div>
+          <div class="paragh">
+            <div class="text">
+           <h3> (3) et (5) Grand et petit diaphragm (Mass and probe) : Permettent de selectionner le courant
+            des ions (petit ou grand courant) et aussi pour régler le wobbler sur l’image apparu.</h3><h3>
+               (4) Wien filter (filtre de masse) permet de slectionner les ions à utiliser d’une source des ions
+              selon leurs masse et leurs déviations par le champ électrique et magnétique appliqué.</h3><h3 class="note">o Au+ ions ( B=0.5 Tesla, E=29.2 V)</h3>
+            <h3 class="note">o Si++ ions (B=0.5 Tesla, E=108 V)</h3><h3> (6) Stigmator sert à corriger les aberrations de l’image</h3><h3> (7) Objective lens (lentille objective) permet de améliorer l’image ~ 16.33 KV.</h3>
+
+            </div>
+            <div class="image">
+              <img src="fethi1-ph5.png" alt="fib" ></div>
+            </div>
+
+            <hr class="space">
+            <div class="paragh">
+              <div class="text">
+               <h3>a : Chambre pour placer l’échantillon dans le porte échantillon de FIB.</h3><h3>b: Caméra pour observer le déplacement de porte échantillon.</h3><h3>c: Porte échantillon ( numéroté de 1 à 6).</h3><h3>d: Fenêtre de FIB.</h3><h3>e: Fenêtre de SEM.</h3><h3>1: Ecran de FIB.</h3><h3>2: Ecran de SEM.</h3><h3>3: Ecran de GIS.</h3>
+               <h3>f: Panneau pour régler magnification (agrandissement), speed of scan, gain
+                (black/white), stigmateur, Objective voltage, condenser voltage nécessaire pour
+                l’alignement de FIB.</h3><h3>g: Panneau pour choisir les motifs et leurs dimensions à graver/ déposer par le FIB/GIS.</h3><h3>h: Panneau pour régler le déplacement de porte échantillon.</h3><h3>i: Panneau pour régler magnification (agrandissement), WD: Working Distance speed of
+                  scan, gain (black/white nécessaire pour la focalisation de SEM.</h3><h3>j: Déplacement x,y et z du porte échantillon dans la chambre à vide ( à Torr ).</h3><h3>K: régler le Wobller par mass et probe diaphragme (aperture).</h3><h3>l: Pomper/ ventiler la chambre de FIB pour introduire/sortir l’échantillon et aussi pour
+                    apparaitre l’image dans fenêtre FIB et SEM par le bouton HV.</h3>
+
+
+              </div>
+              <div class="image">
+                <img src="fethi1-ph10.png" alt="fib" ><img src="fethi1-ph9.png" alt="fib" ><img src="fethi1-ph14.png" alt="fib" ></div>
+              </div>
+              <hr class="space">
+       <h1>3.Utilisation de FIB</h1>
+              <hr class="titleline">
+          
+              <div class="paragh">
+                <div class="text">
+               <h3> Ventilation de la chambre jusqu’à l’augmentation de la pression. (ambiante).</h3><h3>
+                 Ouvrir la chambre.</h3><h3>
+                 Placer l’échantillon dans l’un des portes échantillon par un tournevis ( pour remplacer
+                l’échantillon, on doit cliquer sur le numéro de porte échantillon et on va le retire tout
+                simplement).</h3><h3>
+                 Fermer la chambre, puis pompe jusqu’à diminution de la pression à à torr.</h3><h3>
+                 Régler le déplacement de porte échantillon vers les colonnes FIB et SEM ( on joue sur X et Y
+                , on tilter par Tilte (55 °), puis on rapproche Z.</h3><h3>
+                 On chauffe la source et on augmente le courant d’émission.</h3><h3>
+                 On règle courant d’émission à 4 µA par Extraction et Suppression voltage.</h3><h3>
+                 On clique sur HV-Vacum pour apparaitre l’image sur SEM pour la focalisation de l’image.</h3><h3>
+                 Pour retire l’échantillon : diminution des courant de extracteur et suppresseur, puis on
+                diminue le courant de chauffage à 1.5 A, heat off. Descendre Z à 30, cliquer sur Calibrate.</h3><h3 class="note">Pour déplacer le porte échantillon, on clique sur la roulette de la souris!!!!</h3>
+              </div></div>
+            
+                <hr class="space">
+                <h1>4.Focalisation de SEM</h1>
+                <hr class="titleline">
+            
+           <div class="paragh">
+                  <div class="text">
+                 <h3> Sur le Panneau de réglage correspondant au SEM on joue sur Magnification (agrandissement)
+                  pour rapprocher à notre objet présent dans la surface en utilisant la roulette (5-15 X).</h3><h3> Sur le même panneau on joue sur WD: Working Distance ( la distance sur laquelle le faisceau
+                  électronique de SEM est focalisé (Focused)) jusqu’à atteindre WD et Z = 9.58. Une bonne résolut
+                  de 5 nm approximativement à cette coïncidence (WD et Z = 9.58).</h3><h3>
+                   On augmente le Scan Speed pour obtenir une image SEM.</h3>
+                  </div></div>
+            <div class="image">
+                <img src="fethi1-ph12.png" alt="fib" ><img src="fethi1-ph13.png" alt="fib" ></div>
+             </div>
+                  <hr class="space">
+
+          <h1>5.Alignement de FIB</h1>
+                <hr class="titleline">
+            
+           <div class="paragh">
+                  <div class="text">
+                 <h3> Fermer le SEM, et ouvrir le FIB single pour apparaitre l’image de SEM sur le FIB sans varier la
+                  Magnification.</h3><h3>
+                   On essaie de réduire le Wobller ( il faut que l’objet tourne sur lui-même et non pas sur
+                  sur les autres directions) en utilisant le Mass et Probe aperture et Speed scan toujours petite
+                  (2-3 ).</h3><h3>
+                   Quand l’image de l’objet est stable, on ferme le Wobller et FIB single .</h3><h3>
+                   Sur l’image apparu dans la fenêtre FIB, on pose notre motifs à graver.</h3>
+                  </div></div>
+            <div class="image">
+                <img src="fethi1-ph15.png" alt="fib" ></div>
+             </div>
+                  <hr class="space">
+
+
+
+                  <h1>6.Atomic Force Microscopy</h1>
+                  <hr class="titleline">
+                  <div class="image">
+                    <img src="fethi1-ph16.png" alt="fib" ></div>
+                 </div>
+             <div class="paragh">
+                    <div class="text">
+                   <h3> Technique pour visualiser une surface d’un échantillon (topographie) à haute résolution
+                    Fournir les profils correspondants ( pour déterminer le diamètre, la largeur, et la profondeur
+                    Des gravures par exemple les nanofils dans notre cas.)</h3><h3>
+                     Son principe de fonctionnement est basé sur les interactions (attraction/répulsion) entre les
+                    atomes de la surface d’échantillon et les atomes du sommet d’une pointe (nanométrique) qui
+                    balaie la surface de ce dernier afin de construire une image de surface.</h3><h3>
+                     La pointe fine est fixée à l’extrémité libre d’un nano levier flexible et grâce à un tube
+                    piézoélectrique, la pointe et le levier flexible peuvent se déplacer dans toutes les directions
+                    de l’espace.</h3><h3>
+                     Au balayage, le déplacement du levier permet de mesurer les forces d’interaction, et définir la
+                    topographie de la surface à l’aide d’un diode laser et photodiode.</h3>
+                    </div>
+              <div class="image">
+                  <img src="fethi1-ph17.png" alt="fib"  >
+                    <img src="fethi1-ph18.png" alt="fib" ></div>
+               </div><div class="image">
+                <img src="fethi1-ph19.png" alt="fib" ></div>
+             </div>
+                    <hr class="space">
+                
+               <div class="paragh">
+                      <div class="text">
+                     <h3> Focalisation du laser ( l’échantillon est loin de la pointe)</h3><h3>
+                       Faire apparaitre la pointe sur l’écran en jouant sur les vis de réglage en haut et sur Focus.</h3><h3>
+                       On focalise le laser sur le bout de la point par les grands vis (x et y).</h3><h3>
+ on règle le A+B à 2.5 et A-B à 0 à peu prés par les petits vis (x et y).</h3><h3>
+ on rapproche la pointe à la surface de l’échantillon et on la déplace vers les motifs à scanner
+( repérer par des repères).</h3><h3>
+ on fait appraoch.</h3><h3>
+ On met scan size à 10-20 µm selon les dimensionnement des motifs.</h3><h3>
+ On joue sur le Gain ( quand on a des harmoniques sur le signal vas et viens), ~ 0.8-1 et
+Set point pour maximiser la force d’attraction Aligner le signal d’aller avec la signal de retour
+sur topographie profils.</h3><h3>
+ Avant tout enlèvement ou déplacement de la pointe, on éteindre le laser et mettre Scan size
+à zéro.</h3><h3>
+ Après ouvrir le logiciel de AFM, on doit vérifier l’intensité de laser, si elle est satisfaisante
+donc on saute l’étape 1, 2 et 3.</h3>
+                      </div>
+                <div class="image">
+                    <img src="fethi1-ph22.png" alt="fib" ><img src="fethi1-ph23.png" alt="fib" ></div>
+                 </div><div class="image">
+                  <img src="fethi1-ph21.png" alt="fib" ></div>
+               </div>
+                      <hr class="space">
+
+                      <h1>7. Gas Injection System</h1>
+                      <hr class="titleline">
+                      <div class="image">
+                        <img src="fethi1-ph20.png" alt="fib" ><img src="fethi1-ph24.png" alt="fib" ></div>
+                     </div>
+                 <div class="paragh">
+                        <div class="text">
+                       <h3> Appareil pour faire des gravures accélères avec le FIB, dépôt des couches métallique comme le
+                        Platine Pt, Tungstène W, et des couches d’oxydes comme SiO2.</h3>
+                        </div>
+                  <div class="image">
+                      <img src="fethi1-ph25.png" alt="fib"  ></div>
+                   </div><div class="image">
+                    <img src="fethi1-ph26.png" alt="fib" ></div>
+                 </div>
+                        <hr class="space">
+                        
+                   <div class="paragh">
+                          <div class="text">
+                         <h3>1: Target cap et Target Noz, on doit les ouvrir au début de l’utilisation de GIS, Tcap=70 °C et
+                          Tnoz=100 °C.</h3><h3>
+                          2: les multiples déplacement de la colonne de GIS.</h3>
+                          </div>
+                    <div class="image">
+                        <img src="fethi1-ph27.png" alt="fib"  ></div>
+                     </div>
+                          <hr class="space">
+                          <div class="paragh">
+                            <div class="text">
+                           <h3>3: distance entre les bus d’injections et la surface de l’échantillon.</h3><h3>
+                            4: la position Park.</h3>
+                            </div>
+                      <div class="image">
+                          <img src="fethi1-ph28.png" alt="fib"  ></div>
+                       </div>
+                            <hr class="space">
+
+                            <div class="paragh">
+                              <div class="text">
+                             <h3>5: les positions X, Y et Z de la colonne GIS.</h3><h3>
+                              6: Outgas ( Fluorine, Tungstène, Platine, SiO2……) pour éliminer les gas et les impuretés présent
+                              Dans la chambre ( capillaire).</h3><h3>
+                              7: Valve pour ouvrir le gas sélectionner, pour faire gravure accéléré par exemple on utilise XeF2,
+                              pour dépôt de métal Pt ou bien W…………</h3><h3>
+                              8: Target réservoir, chauffer jusqu’à la température désiré Target res.</h3><h3>
+                              9: Motor initialisation, pour remettre le GIS à la position initial.</h3>
+                              </div>
+                        <div class="image">
+                            <img src="fethi1-ph29.png" alt="fib"  ></div>
+                         </div>
+                              <hr class="space">
+
+
+                              <h1>8. Utilisation de GIS</h1>
+                      <hr class="titleline">
+                 <div class="paragh">
+                        <div class="text">
+                       <h3> Ouvrir Outgas pour dégazage des impuretés, en sélectionnant le gas désiré ( par exemple
+                        le Fluorine XeF2 pour la gravure accéléré (Line 3).</h3><h3>
+                         Sélectionner Park position, puis appuyer sur Go.</h3><h3>
+                         On met distance à 50 µm.</h3><h3>
+                         Si X position est à 0, donc on met Target (X) à 20000 puis on appuyer sur Go (Back/Forth),
+                        On règle X à 23800, Y à 9700 et Z à 10850 en utilisant les multiples déplacement (Back, Forth,
+                        Up……………..) jusqu’à l’apparition des buses d’injections dans le SEM.</h3><h3>
+                         Ouvrir tout les boutons de Target Cap et Target Noz jusqu’à la stabilisation de la température
+                        à 70 °C et 100 °C respectivement.</h3><h3>
+                         Ouvrir Target res (Fluorine par exemple) et on attend la stabilisation de la température à 7 °C.</h3><h3>
+                         Ouvrir Valve de Fluorine et on regarde column pressure augmente jusqu’à la stabilisation ~
+                        Pa .</h3><h3>
+                         Faire la gravure, on choisit accelerated etching mode dans le panneau de déclaration des
+                        motifs.</h3><h3>
+                         quand la gravure termine, on ferme la valve du gas spécifié et on attend la pression descend
+                        à Pa.</h3><h3>
+                         pour retirer le GIS, on met distance à 200 µm, puis on appuyer sur Motor initialisation. On
+                        éteint Target Cap et Target Noz.</h3>
+                        
+                  <div class="image">
+                    <img src="fethi1-ph30.png" alt="fib" ></div>
+                 </div></div>
+                        <hr class="space">
+
+                        <h1>9.Rapid Thermal Oxydation RTO</h1>
+                        <hr class="titleline">
+                        <div class="paragh">
+                          <div class="text">
+                         <h3>Appareil utile pour faire l’oxydation thermique humide et sec ( Dry and Wet), et pour faire
+                          Le recuit thermique dans le but de modifier les propriétés physique et électronique d’un
+                          matériau.</h3></div>
+                          <div class="image">
+                            <img src="fethi1-ph32.png" alt="fib" ></div>
+                         </div></div>
+                    <div class="image">
+                      <img src="fethi1-ph31.png" alt="fib" ></div>
+                   </div></div><hr class="space">
+
+                  <h1>10.Utilisation de RTO</h1>
+                        <hr class="titleline">
+                        <div class="paragh">
+                          <div class="text">
+                         <h3>A. Introduire l’échantillon dans la chambre de RTO.</h3><h3>
+                          B. Ouvrir les gas de O2 et N2 et aussi la pompe pour créer un vide dans la chambre.</h3><h3>
+                          C. Dans le logiciel, aller à Maintenance pour tester le flux des gas.</h3><h3>
+                          D. Dans Receipe (recette) dowload une recette désiré parmi les recettes existante ( par
+                          exemple : 800 °c, 500 s).</h3><h3>
+                          E. Aller à Processing et appuyer sur Start pomping pour passer de l’ambiante vers le vide
+                          ( 3 fois ( 60 s chaqu’une) et chaque fois cliquer sur Next step) jusqu’à il envoi le O2, puis
+                          Il stop et il commence le refroidissement).</h3><img src="fethi1-ph35.png" alt="fib" width="100px" ></div>
+                          <div class="image">
+                            <img src="fethi1-ph33.png" alt="fib" ><img src="fethi1-ph34.png" alt="fib" ></div>
+                         </div></div>
+                         <h1>11. Photolithography Laser
+                          Direct writting</h1>
+                        <hr class="titleline">
+                        <div class="paragh">
+                          <div class="image">
+                            <img src="fethi1-ph36.png" alt="fib" ></div>
+                         
+                          <div class="text">
+                         <h3> Appareil pour lithographie par écriture direct sans
+                          Utiliser le masque comme les autres techniques de
+                          lithographie optiques.</h3><h3>
+                           Résolution < à 2 µm.</h3><h3>
+                           Compatible avec la majorité des résines commerciales.</h3><h3>
+                           Réalisation des prototypes à la demande grace à son
+                          Logéciel Dilase Design.</h3><h3>
+                           Très utiles pour contacter des objets nanométriques avec
+                          Une grande précision.</h3><h3>
+                           Utilise une source de laser émettant à 375 nm (UV), 70 mW</h3></div>
+                          </div>
+                          <div class="paragh">
+                            <div class="image">
+                              <img src="fethi1-ph39.png" alt="fib" ></div>
+                              <div class="image">
+                                <img src="fethi1-ph37.png" alt="fib" ></div>
+                                <div class="image">
+                                  <img src="fethi1-ph38.png" alt="fib" ></div></div>
+
+                   <div class="image"><img src="fethi1-ph40.png" alt="fib" ></div>
+                   <div class="image"><img src="fethi1-ph41.png" alt="fib" ></div>
+                   <h1>12.Utilisation de Dilase 250</h1>
+                   <hr class="titleline">
+                   <div class="paragh">
+                     <div class="text">
+                    <h3>o Préparation de l’échantillon ( résine……………….).</h3><h3>
+                      o Allumer le Dilase 250, puis motor initialisation puis Vent pour ouvrir la chambre.</h3><h3>
+                      o Introduire l’échantillon préparer dans Dilase 250 puis pump.</h3><h3>
+                      o Désigner le motif désiré ( par exemple des pads) à l’aide de Dilase Design.
+                      o Focalisation sur la surface ( Mettre Z à -6.44).</h3><h3>
+                      o Avec les boutons de directions, trouver un repère ( par exemple Croix) qui indique
+                      L’emplacement des nano-objets sur la surface ( par exemple les nanofils).</h3><h3>
+                      o Mettre Set Zero sur ce repère. ( X=0, Y=0).</h3><h3>
+                      o Donne les valeurs approximatives de X et Y ( distance entre le repère (Croix) et les nanofils
+                      ( calculés au niveau FIB/SEM)), puis faire Go absolute.</h3><h3>
+                      o Choisir la Velocity 0.01.</h3><h3>
+                      o Laser on.</h3><h3>
+                      o Exporter le fichier qui contient le motifs en utilisant le panneau de control des paramètres
+                      de lithographie.</h3><h3>
+                      o Mettre la modulation de la puissance de laser à 10 et la Velocity à 11.
+                      o lancer la photolithographie.</h3><h3>
+                      o Mettre l’échantillon dans un développeur de résine MF-319 pour enlever la partie exopsé
+                      de résine .</h3><h3>
+                      o Observer les motifs réalisé avec Microscope Optique.</h3></div>
+                    </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section left">
+                <h3>Hexagon Scientific Community</h3>
+                <p>Email: hexagonsc.nsnn@gmail.com</p>
+                <p>A scientific and cultural club</p>
+            </div>
+            <div class="footer-section right">
+            <h3>Odyssey Department</h3>
+            <p>Email: shinekessad18@gmail.com</p>
+            <p>Department for scientific research</p>
+            </div>
+            
+        </div>
+        <div class="icons">
+            <a href="https://www.linkedin.com/company/hexagon-scientific-community/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61562221498533" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/hexagonsc.nsnn/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -108,7 +108,6 @@ nav li:first-child{
   display: none;
 }
 .main {
-  padding: 20px;
   background-color: #eefdfe; 
   max-width: 2000px; /* Control the maximum width */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
@@ -122,23 +121,6 @@ nav li:first-child{
   margin-bottom: 20px;
   
 }
-.separator {
-border: none;
-  height: 20px;
-  background-color: #007bff; /* Color of the line */
-  margin: 20px 0;
-}
-.dropepage {
-margin: 40px;
-display: flex;
-background-color: blue;
-display: flex;
-flex-direction: column;
-
-}
-.texth {
-background-color: aquamarine;
-}
 .main h2 {
   font-size: 24px;
   margin-bottom: 10px;
@@ -150,18 +132,20 @@ background-color: aquamarine;
   margin-bottom: 20px;
   margin-top: 30px;
 }
-.separator {
-border: none;
-height: 5px;
-background-color: #0f2841; /* Color of the line */
-margin: 20px 0; /* Space around the line */
-border-radius: 20px;
+
+
+.firsttitle {
+  background-image: url(../photos/melissa-first-year-4.png);
+  width: 100%;
 }
-
-.news h1 {
-text-align: center;
-
-}.footer {
+.title {
+  background-color: #0D1B26;
+  width: fit-content;
+  padding: 20px;
+  margin: 30px;
+  margin-bottom: 0px;
+}
+.footer {
   background-color: #eefdfe; /* Example background color */
   padding: 20px 0; /* Example padding */
   border-radius: 8px;
