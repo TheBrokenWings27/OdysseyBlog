@@ -185,7 +185,7 @@ text-align: center;
 .social-icon:hover {
   color: #000; /* Change color on hover */
 }
-  @media(max-width: 800px){
+  @media(max-width: 950px){
     .hideOnMobile{
       display: none;
     }

@@ -150,7 +150,14 @@ nav li:first-child{
 }
 .content img {
   border-radius: 20px;
+  width: 50%;
+  height: 100%;
+  
 }
+.photo{
+ margin-right: 200px;
+}
+
 .texts {
   display: flex;
   flex-direction: column;
@@ -178,7 +185,7 @@ nav li:first-child{
 .separator1 {
   display: none;
 }
-@media(max-width: 800px){
+@media(max-width: 900px){
   .text {
     display: flex;
     flex-direction: column;
@@ -189,6 +196,11 @@ nav li:first-child{
   .content {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .content img {
+    width: 50%;
+    
   }
   .separator1 {
     height: 2px;
@@ -240,7 +252,7 @@ text-align: center;
 .social-icon:hover {
   color: #000; /* Change color on hover */
 }
-  @media(max-width: 800px){
+  @media(max-width: 950px){
     .hideOnMobile{
       display: none;
     }
