@@ -372,9 +372,9 @@ text-align: center;
          Go Tools………. Cutline………Calculator symbole……….. Set X value at middle value and Y from
         the top to the end cutline value.</h3><h3>
          In the same graph, we can plot the valence band by display option.</h3></div>
-        <div class="image"> <img src="fethi2-ph13.png" alt="fib" ></div></div>
+        <div class="image"> <img src="fethi2-ph13.png" alt="fib" ><img src="fethi2-ph14.png" alt="fib" ></div></div>
 
-        <div class="image"> <img src="fethi2-ph14.png" alt="fib" ></div>
+        
         <div class="image"> <img src="fethi2-ph15.png" alt="fib" ></div>
         <h3> Big meshing values fast simulation, but less accurate results</h3><h3>
              Small meshing values  slow simulation, but more accurate results</h3><h3>
@@ -404,7 +404,7 @@ text-align: center;
         <h3>Solve init: call all the parameters of structure, doping, materials parameters………… which
             described previously.</h3><h3>
             Solve b1=1 : Set the intensity of the beam number one ( solar Spectrum : AM0 or AM1.5)
-            at 1 W/cm^2.</h3><h2>beam num=1 AM1.5 x.origin=0.05 y.origin=-2.0 angle=90.0</h2>
+            at 1 W/cm^2.</h3><h3 class="note">beam num=1 AM1.5 x.origin=0.05 y.origin=-2.0 angle=90.0</h3>
             <h3>Solve name=anode…….. : Varie the anode voltage from 0 to 0.8 V by 0.01 (pas).</h3><h3>
 Extract init infile=name.ext : Extract from this file the parameters specified, for example if
 We have a file .log which contains current versus voltage, so we can Extract the characterstic
@@ -413,6 +413,36 @@ parameters of a solar cell like : Jsc , Voc, FF and efficiency ɳ.</h3>
     <div class="image">
       <img src="fethi2-ph6.png" alt="fib" ></div>
     </div>
+
+    <div class="paragh">
+        <div class="text">
+            <h3>1e12 : when Atlas Silvaco works at 2D simulation ( X and Y), he takes the Z dimension
+                equals to 1 µm by default and the current values in .log are given in ( A/µm ), so to convert
+                it into (mA/cm^2) :</h3><div class="image">
+                    <img src="fethi2-ph17.png" alt="fib" ></div>
+                <h3> When we are working at 3D in Atlas, the current values
+                    Will be in A.</h3>
+                    <div class="image">
+                        <img src="fethi2-ph7.png" alt="fib" ></div>
+                    <h3> If the Z dimension not equals to 1 µm, for example
+                        we can find this statement in ATLAS example
+                        codes : « mesh Width = 200000 µm », this means Z equals to 200000 µm and not to 1, so
+                        the equation of current conversion above must be change by setting Z to 200000 µm.</h3></div>
+        </div>
+        <hr class="space">
+        
+        <div class="paragh">
+            <div class="text">
+                <h3>Generaly, ATLAS show the current-voltage of a solar cell : Cathode current versus light Intensity,
+                    Then to convert it into cathode current versus voltage we must fellow the steps :</h3><h3>
+                     Go Plot………display……….. X quantity and Choose : Anode Voltage.</h3><h3>
+                     Zoom the graph around « 0 », to get the worthy graph.</h3><h3>
+                     As we talk previously the cathode current are in A/µm, to convert it into mA/cm^2, we multiply
+                    by 1e12 ( in our example), by fellowing the steps :</h3><h3>
+                    1. Go display………….Y quantity……………Functions…………Graph Func 1 and write
+                    1e12 * cathode current.</h3><h3>
+                     We can change the Axis titles using Plot……….Annotation</h3></div>
+              <div class="image"> <img src="fethi2-ph8.png" alt="fib" ></div></div>
     </main>
     <footer class="footer">
         <div class="container">

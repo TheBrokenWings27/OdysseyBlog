@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyssey Blog</title>
+    <meta name="title" content="NSNN Blog Website">
+    <meta description="A plog Website For the National Higher School Of Nanosciences and Nanotechnology Students">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #246083; 
+}
+::-webkit-scrollbar-thumb {
+    background: #eefdfe;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0D1B26;
+}
+  body{
+    min-height: 100vh;
+    animation: gradient 1s ease infinite;
+    background: linear-gradient(15deg, #0D1B26, #246083);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Cairo', sans-serif;
+    margin: 20px;
+  }
+
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+  nav{
+    background-color: #eefdfe;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav li{
+    height: 100px;
+  }
+  nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: large;
+    border-radius: 1000px;
+    transition: background-color 0.3s ease;
+  }
+ 
+  nav a:hover{
+    background-color: #0D1B26;
+    color: #eefdfe;
+  }
+  nav li:first-child{
+    margin-right: auto;
+  }
+  
+  .sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+  }
+
+
+
+  /*         Main
+  */
+  .text {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: large;
+    margin-bottom: 30px;
+}
+  .main {
+    padding: 20px;
+    background-color: #eefdfe; 
+    max-width: 2000px; /* Control the maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 8px;
+    
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+.title {
+   align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.title h1{
+    
+    margin-bottom: 10px;
+}
+.title h5 {
+    margin-left: 40px;
+    margin: 2px 0;
+}
+.title p {
+    font-size: small;
+    color: gray;
+}
+.article {
+    padding: 10px 20px;
+}
+.article p {
+    font-size: small;
+    color: gray;
+}
+.article h5 {
+    text-align: left;
+    font-size: medium;
+    margin: 20px;
+}
+.space {
+    margin-bottom: 20px;
+}
+.titleline {
+  border: none;
+  height: 3px;
+  margin-bottom: 30px;
+  background-color: #fddc5c; 
+  border-radius: 20px;
+}
+.photos {
+    display: flex;
+}
+.photos img {
+    width: 50%;
+}
+@media(max-width: 900px){
+    .photos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.main h3 {
+  font-size: medium;
+}
+.photos img {
+    margin-top: 10px;
+}
+  }
+  .text {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+/* 
+     FOOTER
+*/
+
+
+.footer {
+  background-color: #eefdfe; /* Example background color */
+  padding: 20px 0; /* Example padding */
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+  color: #000;
+}
+
+.footer-section {
+  flex: 1; /* Flexibly grow to take up available space */
+}
+
+.footer-section h3 {
+  text-align: center;/* Left align text */
+}
+
+.footer-section p {
+  text-align: center;
+  margin-right: 0px; /* Left align text */
+}
+.icons {
+text-align: center;
+}
+.social-icon {
+  margin-left: 15px; /* Spacing between icons */
+  color: #246083; /* Default icon color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 20px; /* Icon size */
+}
+
+.social-icon:hover {
+  color: #000; /* Change color on hover */
+}
+  @media(max-width: 900px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .main {
+      margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+   }
+   
+  }
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+    }
+  }
+  @media(max-width: 900px){
+  .main {
+      margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+   }}
+   
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../photos/Symbol.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+
+
+
+<body>
+    <script>
+      function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
+  
+    </script>
+    <!--
+
+        header
+    -->
+    <header id="navbar" >
+        <nav class="sticky">
+            <ul class="sidebar">
+              <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+              <li><a href="../index.html" class="nav-link-1" >Home</a></li>
+              <li><a href="../html/life.html" class="nav-link-1" >Students Life</a></li>
+              <li><a href="../html/club.html" class="nav-link-1" >Club Activities</a></li>
+              <li><a href="../html/articles.html" class="nav-link-1" r>Scientific Articles</a></li>
+              <li><a href="../html/news.html" class="nav-link-1">Nanotechnology News</a></li>
+            </ul>
+            <ul>
+              <li><a href="../index.html">
+                <img src="../photos/Odyssey.png" alt="logo" width="100px" class="logo">
+                <h2>Odyssey Blog</h2>
+            </a></li>
+              <li class="hideOnMobile"><a href="../index.html">Home</a></li>
+              <li class="hideOnMobile"><a href="../html/life.html">Students Life</a></li>
+              <li class="hideOnMobile"><a href="../html/club.html">Club Activities</a></li>
+              <li class="hideOnMobile"><a href="../html/articles.html">Science Articles</a></li>
+              <li class="hideOnMobile"><a href="../html/news.html">Nanotechnology News</a></li>
+              <li class="menu-button" onclick=showSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+
+  
+
+    <main class="main">
+             
+     <div class="title">
+      <h1>My Experience With NSNN</h1>
+      <h5>25 jul 2024</h5>
+        <h5>Written by CHELIHI Motaki Errahmane</h5>
+        <h5>Top Grade Student & Second Year NSNN</h5>
+       
+
+       <div class="photos">
+      <img src="../photos/taki-first-year-personal.jpg" alt="taki" >
+     
+      <img src="../photos/taki-first-year-group.jpg" alt="taki" ></div>
+
+    </div>
+
+      <div class="text">  
+      <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This year ended quicker than what i had imagined I met alot of competent individuals,
+        learned alot of stuff and made valuable friendships</h5>
+
+    
+
+        <div class="space"></div>
+       <h5>Sure this year still had its downs, like the administrative problems but every journey has its obstacles</h5><div class="space"></div>
+        <h5>My advice to the newcomers: Focus on your studies
+            Try to participate in club activities Develop your skills</h5><div class="space"></div>
+   <h5>That's all !</h5>
+   <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I wish everyone a successful career</h5>
+      </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section left">
+                <h3>Hexagon Scientific Community</h3>
+                <p>Email: hexagonsc.nsnn@gmail.com</p>
+                <p>A scientific and cultural club</p>
+            </div>
+            <div class="footer-section right">
+            <h3>Odyssey Department</h3>
+            <p>Email: shinekessad18@gmail.com</p>
+            <p>Department for scientific research</p>
+            </div>
+            
+        </div>
+        <div class="icons">
+            <a href="https://www.linkedin.com/company/hexagon-scientific-community/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61562221498533" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/hexagonsc.nsnn/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
